@@ -14,9 +14,9 @@ plotData <- subset(allData, subset=(Date >= "2007-02-01" & Date <= "2007-02-02")
 rm(allData)
 
 #build the histogram
+png("project/plot1.png", width=480, height=480)
 hist(plotData$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
 
 #export it to a png file with the proper margins
 ## Saving to file
-dev.copy(png, file="plot1.png", height=480, width=480)
 dev.off()
